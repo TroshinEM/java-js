@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app='equipment'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Add Equipment</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src=https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js></script>
+<script type="text/javascript" src="main.js"></script>
+<div ng-controller="eqCtrl">
+    <h5> Add Server to Database </h5>
+    <p>Model: <input type="text" name="model_input" ng-model="model_input" /> </p>
+    <p>Serial: <input type="text" name="serial_input" ng-model="serial_input" /> </p>
+    <button ng-click="SendData(model_input, serial_input)">Add</button>
+</div>
+<div ng-controller="eqCtrl">
+    <br><h5> Delete Server from Database </h5>
+    <p>Id: <input type="text" name="id_input" ng-model="id_input" /> </p>
+    <button ng-click="DeleteData(id_input)">Delete</button>
+</div>
+<div ng-controller="eqCtrl">
+   <br> <h5> Update model in Database </h5>
+    <p>Id: <input type="text" name="id_for_update_mode" ng-model="id_for_update_model" /> </p>
+    <p>Model: <input type="text" name="model_for_update" ng-model="model_for_update" /> </p>
+    <button ng-click="UpdateModel(id_for_update_model, model_for_update)">Update model</button>
+</div>
+<div ng-controller="eqCtrl">
+   <br> <h5> Update serial in Database </h5>
+    <p>Id: <input type="text" name="id_for_update_serial" ng-model="id_for_update_serial" /> </p>
+    <p>Serial: <input type="text" name="serial_for_update" ng-model="serial_for_update" /> </p>
+    <button ng-click="UpdateSerial(id_for_update_serial, serial_for_update)">Update serial</button>
+</div>
+<div ng-controller="eqCtrl">
+    <br><h5> Show all models in Database </h5>
+    <button ng-click="ShowAll()">Show all</button>
+</div>
+</body>
+</html>
